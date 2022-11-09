@@ -24,3 +24,5 @@ public class Ejercicio7{
         }
       }
     }
+
+    /*Añado un comentario  por que ya habia creado antes la impresión del examen*/
