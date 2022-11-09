@@ -5,7 +5,7 @@ public class Ejercicio7{
     	
         Scanner sc = new Scanner(System.in);
         
-        int CANTIDAD =20;
+        int CANTIDAD =30;
         
         int INICIOINTERVALO = 1;
         
