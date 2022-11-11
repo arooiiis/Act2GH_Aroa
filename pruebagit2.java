@@ -1,40 +1,33 @@
-import java.util.Scanner;
+public class pruebagit2 {
+  public static void main(String[] args) {
 
-public class Ejercicio7{
-    public static void main(String[] args){
-    	
-        Scanner sc = new Scanner(System.in);
-        
-        int CANTIDAD =30;
-        
-        int INICIOINTERVALO = 1;
-        
-        int FINALINTERVALO = 10;
-        
-        
-        int [] elementos = new int [CANTIDAD];
-        int [] contador = new int [10];
-        
-        for (int i = 0; i < CANTIDAD; i++) {
-        	
-        	elementos [i] = (int)(Math.random()*(FINALINTERVALO - INICIOINTERVALO +1)) + INICIOINTERVALO;
-        	
-        }
-        for (int i = 0; i < CANTIDAD; i++) {
-        System.out.println(elementos[i]) ;
-        }
+    int[] elementos = InsertarNumerosArray();
 
-        for (int i = 0; i < CANTIDAD; i++) {
+    Contador(elementos);
 
-          for (int j = 0; j < CANTIDAD; j++) {
+  }
 
-            if(elementos[i] == elementos[j]){
-              contador ++;
-            }
-
-
-
+  public static void Contador(int[] array) {
+   
+    for (int i = 1; i < 11; i++) {
+      int contador = 0;
+      for (int j = 0; j < array.length; j++) {
+        if (array[j] == i) {
+          contador++;
         }
       }
+      System.out.println("El numero " + i + " se repite " + contador + " veces");
+    }
+  }
+
+  public static int[] InsertarNumerosArray() {
+    int[] array = new int[30];
+    for (int i = 0; i < array.length; i++) {
+
+      array[i] = (int) (Math.random() * 10 + 1);
 
     }
+    return array;
+
+  }
+}
